@@ -47,12 +47,12 @@ namespace PicoYPlaca
             // Use of the two FieldValidation boolean methods created on "Validation" class
             if (!txtLicenseLetters.letterFieldValidation())
             {
-                MessageBox.Show("The plate letters field must be letters only and with 3 digits.");
+                MessageBox.Show("The plate letters field must be letters only and with 3 digits.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (!txtLicenseNumbers.numberFieldValidation())
             {
-                MessageBox.Show("The plate number field must be numbers only and with 3 or 4 digits.");
+                MessageBox.Show("The plate number field must be numbers only and with 3 or 4 digits.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             
@@ -91,7 +91,7 @@ namespace PicoYPlaca
             // IF to validate the day for the restriction
             if (flag == 1) TimePickerRestriction();
             else
-                MessageBox.Show("Your vehicle does not have restriction today.");
+                MessageBox.Show("Your vehicle does not have restriction today.", "You can leave home", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // Void method to validate the TimePicker restriction in case the day and last digit of the license plate number match the cases from the switch
@@ -110,11 +110,11 @@ namespace PicoYPlaca
                 || timePicker.Value.Hour == horaFinManana && timePicker.Value.Minute >= 0 && timePicker.Value.Minute <= minFin
                 || timePicker.Value.Hour == horaFinTarde && timePicker.Value.Minute >= 0 && timePicker.Value.Minute <= minFin)
             {
-                MessageBox.Show("Your vehicle cannot go out because the time is: " + timePicker.Value.TimeOfDay.ToString());
+                MessageBox.Show("Your vehicle cannot go out because the time is: " + timePicker.Value.TimeOfDay.ToString(), "Stay Home", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Your vehicle can go out as the time is: " + timePicker.Value.TimeOfDay.ToString());
+                MessageBox.Show("Your vehicle can go out as the time is: " + timePicker.Value.TimeOfDay.ToString(), "You can leave home", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
