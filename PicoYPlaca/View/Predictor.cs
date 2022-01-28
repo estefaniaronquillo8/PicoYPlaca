@@ -22,7 +22,7 @@ namespace PicoYPlaca
             InitializeComponent();
             InitializeTimePicker();
 
-            // Code por the Start position of the application on the screen .
+            // Code por the Start position of the application on the screen
             StartPosition = FormStartPosition.CenterScreen;
 
             // Maximum length for the input values on the TextBoxs
