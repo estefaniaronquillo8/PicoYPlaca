@@ -31,7 +31,7 @@ Pico y Placa - Predictor
 				- Has the boolean methods from the Validation class on 
 				  the Helper folder. 
 				- A new variable was created to get the last digit of the license
-		|		  plate number
+				  plate number
 				- A switch was created for checking each day's restriction with
 				  the date and last digit
 			- A new void method was created to validate the TimePicker restriction
