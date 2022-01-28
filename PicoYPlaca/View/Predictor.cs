@@ -16,7 +16,6 @@ namespace PicoYPlaca
     public partial class Predictor : Form
     {
         private DateTimePicker timePicker;
-        int borrar;
 
         public Predictor()
         {
